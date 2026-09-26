@@ -7,4 +7,7 @@ set (CMAKE_C_STANDARD 99)
 add_executable(
         ${PROJECT_NAME}
         main.c
+        ClearMap.c
+        Map.c
+        Map.h
 )
