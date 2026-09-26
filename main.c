@@ -1,24 +1,41 @@
 #include <stdio.h>
+#include <string.h>
+#include "Map.h"
+
 
 int main() {
+
+    char command[64];  // буфер для ввода
+    int move_count = 0;  // счётчик ходов
+
     printf("Hello the wanderer\n");
 
-    const char* map[6] = {
-        "###################################",
-        "#                                 #",
-        "#                                 #",
-        "#                                 #",
-        "#                                 #",
-        "###################################",
+    printf("If you want start write 'Play' and anything else for close game");
+
+    // Считываем ввод пользователя
+  fgets(command, sizeof(command), stdin);
 
 
-    };
+// запуск игры менюшка
 
-    size_t map_len = sizeof(map)/sizeof(map[0]);
+    if (strcmp(command, "Play\n") == 0 ||
+        strcmp(command, "play\n") == 0 ||
+            strcmp(command, "PLAY\n") == 0) {
 
-    for (size_t i = 0; i < map_len; i++) {
-        printf("%s\n", map[i]);
+
+        map_spawn();
+
+
+    } else {
+        printf("Bye, gamer\n");
+
     }
+
+
+
+    return 0;
+
+
 
 
 
