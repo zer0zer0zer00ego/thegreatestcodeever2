@@ -10,4 +10,8 @@ add_executable(
         ClearMap.c
         Map.c
         Map.h
+        config.h
+        hero.h
+        hero.c
+        dungeon.h
 )
